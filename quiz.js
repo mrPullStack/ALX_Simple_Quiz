@@ -9,10 +9,14 @@ function checkAnswer() {
     const feedback = document.getElementById("feedback");
 
     //check user's answer
-    if(userAnswer === correctAnswer){
-        feedback.textContent = "Correct! Well done.";
-    }else {
-        feedback.textContent = "That's incorrect. Try again!"
+    if (userAnswer) {
+        if (userAnswer === correctAnswer) {
+            feedback.textContent = "Correct! Well done.";
+        } else {
+            feedback.textContent = "That's incorrect. Try again!";
+        }
+    } else {
+        feedback.textContent = "Please select an answer!";
     }
 }
 
